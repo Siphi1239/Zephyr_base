@@ -1,2 +1,6 @@
 image:
   file: Dockerfile.gitpod
+
+tasks:
+  - name: "Fetch Blobs"
+    init: west blobs fetch hal_espressif
