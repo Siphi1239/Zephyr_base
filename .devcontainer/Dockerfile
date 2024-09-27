@@ -1,3 +1,2 @@
-FROM ghcr.io/devcontainers/templates/cpp
-
+FROM mcr.microsoft.com/devcontainers/cpp
 RUN apt-get update
