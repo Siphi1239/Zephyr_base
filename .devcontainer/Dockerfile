@@ -20,4 +20,4 @@ RUN wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.8/
 
 
 #INSTALL WEST
-#RUN pip3 install west
+RUN pip3 install --break-system-packages west

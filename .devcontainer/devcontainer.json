@@ -1,3 +1,12 @@
 {
- "build": { "dockerfile": "Dockerfile" }
+ "build": { "dockerfile": "Dockerfile" },
+ "customizations": {
+  "vscode": {
+    "extensions": [
+        "microsoft.Docker",
+        "twxs.CMake",
+        "nordic-semiconductor.nrf-devicetree"
+    ]
+  }
+ }
 }
