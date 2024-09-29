@@ -1,6 +1,8 @@
 {
  "build": { "dockerfile": "Dockerfile" },
- "workspaceMount": "source=${localWorkspaceFolder},target=/project_root/app,type=bind",
+ "workspaceMount": "source=${localWorkspaceFolder},target=/project_root/app,type=bind", 
+ "workspaceFolder": "/project_root",
+ "onCreateCommand": "bash -i /project_root/app/.devcontainer/onCreate.sh",
  "customizations": {
   "vscode": {
     "extensions": [
