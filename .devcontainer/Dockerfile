@@ -21,3 +21,6 @@ RUN wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.8/
 
 #INSTALL WEST
 RUN pip3 install --break-system-packages west
+
+#FOLDER SETUP
+RUN mkdir /project_root && chown vscode:vscode /project_root
