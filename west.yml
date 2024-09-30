@@ -1,7 +1,7 @@
 manifest: 
   version: "1.2"
   projects:
-    - name: zephyr_sdk
+    - name: zephyr
       url: https://github.com/zephyrproject-rtos/zephyr.git
       revision: zephyr-v3.5.0
       import:

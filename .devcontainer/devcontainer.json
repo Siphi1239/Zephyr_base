@@ -6,6 +6,7 @@
  "customizations": {
   "vscode": {
     "extensions": [
+        "ms-vscode.cpptools-extension-pack",
         "microsoft.Docker",
         "twxs.CMake",
         "nordic-semiconductor.nrf-devicetree"
