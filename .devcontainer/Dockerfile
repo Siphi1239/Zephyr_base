@@ -7,7 +7,8 @@ RUN sudo apt-get install -y --no-install-recommends gperf \
     make gcc gcc-multilib g++-multilib libsdl2-dev libmagic1
 
 #GET ZEPHYR SDK
-RUN wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.8/zephyr-sdk-0.16.8_linux-x86_64.tar.xz && \
+RUN mkdir /zephyr_toolchain && cd /zephyr_toolchain &&\
+    wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.8/zephyr-sdk-0.16.8_linux-x86_64.tar.xz && \
     wget -O - https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.8/sha256.sum | shasum --check --ignore-missing &&\
     tar xvf zephyr-sdk-0.16.8_linux-x86_64.tar.xz &&\
     cd zephyr-sdk-0.16.8 && \
@@ -16,8 +17,9 @@ RUN wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.8/
     ./setup.sh -t xtensa-espressif_esp32s3_zephyr-elf && \
     ./setup.sh -t arm-zephyr-eabi && \
     ./setup.sh -c -h &&\
-    cd .. && rm zephyr-sdk-0.16.8_linux-x86_64.tar.xz
-
+    cd .. && rm zephyr-sdk-0.16.8_linux-x86_64.tar.xz &&\
+    export ZEPHYR_TOOLCHAIN_VARIANT=zephyr &&\
+    export ZEPHYR_SDK_INSTALL_DIR=/zephyr_toolchain/zephyr-sdk-0.16.8
 
 #INSTALL WEST
 RUN pip3 install --break-system-packages west
