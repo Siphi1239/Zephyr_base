@@ -4,6 +4,7 @@ manifest:
     - name: zephyr
       url: https://github.com/zephyrproject-rtos/zephyr.git
       revision: zephyr-v3.5.0
+      clone-depth: 5
       import:
         path-prefix: deps
 
