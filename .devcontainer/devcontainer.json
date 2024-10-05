@@ -5,11 +5,19 @@
  "onCreateCommand": "bash -i /project_root/app/.devcontainer/onCreate.sh",
  "customizations": {
   "vscode": {
+    "settings": {
+        "cmake.configureOnOpen": false,
+        "cmake.showOptionsMovedNotification": false,
+        "C_Cpp.default.compilerPath": "/zephyr_toolchain/zephyr-sdk-0.16.8/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc",
+        "C_Cpp.default.compileCommands": "/project_root/build/compile_commands.json",
+        "git.autofetch": false
+      },
     "extensions": [
         "ms-vscode.cpptools-extension-pack",
         "microsoft.Docker",
         "twxs.CMake",
-        "nordic-semiconductor.nrf-devicetree"
+        "nordic-semiconductor.nrf-devicetree",
+        "nordic-semiconductor.nrf-kconfig"
     ]
   }
  }
