@@ -1,5 +1,14 @@
 manifest: 
   version: "1.2"
+  remotes:
+    # nRF Connect SDK GitHub organization.
+    # NCS repositories are hosted here.
+    - name: ncs
+      url-base: https://github.com/nrfconnect
+
+  defaults:
+    remote: ncs
+
   projects:
     - name: zephyr
       url: https://github.com/nrfconnect/sdk-zephyr
@@ -9,8 +18,16 @@ manifest:
         path-prefix: deps
     - name: boards
       url: https://github.com/Siphi1239/Zephyr_boards
-      import:
-        path-prefix: my_boards
+      revision: main
+    - name: openthread
+      repo-path: sdk-openthread
+      path: modules/lib/openthread
+      revision: ncs-thread-reference-20241002
+      userdata:
+        ncs:
+          upstream-url: https://github.com/openthread/openthread
+          upstream-sha: c6eaeda5a1c1c5dbb24dce7e027340cb8893a77b
+          compare-by-default: false
 
 self: 
   path: app
