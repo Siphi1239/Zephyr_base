@@ -7,6 +7,10 @@ manifest:
       clone-depth: 5
       import:
         path-prefix: deps
+    - name: boards
+      url: https://github.com/Siphi1239/Zephyr_boards
+      import:
+        path-prefix: my_boards
 
 self: 
   path: app
