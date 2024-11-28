@@ -3,7 +3,7 @@ manifest:
   projects:
     - name: zephyr
       url: https://github.com/nrfconnect/sdk-zephyr
-      revision: sdk-zephyr v3.7.99-ncs1
+      revision: v3.7.99-ncs1
       clone-depth: 5
       import:
         path-prefix: deps
