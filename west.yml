@@ -2,8 +2,8 @@ manifest:
   version: "1.2"
   projects:
     - name: zephyr
-      url: https://github.com/zephyrproject-rtos/zephyr.git
-      revision: zephyr-v3.5.0
+      url: https://github.com/nrfconnect/sdk-zephyr
+      revision: sdk-zephyr v3.7.99-ncs1
       clone-depth: 5
       import:
         path-prefix: deps
